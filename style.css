@@ -1,0 +1,67 @@
+/* Basisstijl voor de hele pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f4f8; /* Zachte achtergrondkleur */
+    color: #333; /* Donkergrijze tekst */
+}
+
+/* Header-stijl */
+header {
+    background-color: #2c3e50; /* Diepblauwe kleur */
+    color: #ecf0f1; /* Lichtgrijze tekst */
+    padding: 20px 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Container voor de knoppen */
+.button-container {
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Knoppenstijl */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    color: #ffffff; /* Witte tekst */
+    background-color: #3498db; /* Blauw */
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Soepele animatie */
+    transform: scale(1); /* Voor animatie */
+}
+
+/* Hover-effect voor de knoppen */
+.button:hover {
+    background-color: #2980b9; /* Donkerder blauw bij hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Vergroot de knop iets */
+}
+
+/* Footer-stijl */
+footer {
+    margin-top: 20px;
+    background-color: #2c3e50; /* Diepblauw zoals de header */
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 0.9rem;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
