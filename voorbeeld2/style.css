@@ -1,0 +1,83 @@
+/* Basisstijl voor de hele pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f3f5;
+    line-height: 1.6;
+}
+
+/* CSS Grid Container */
+.grid-container {
+    display: grid; /* Dit gebruik je voor de CSS Grid container, om grid te 'activeren'. */
+    grid-template-areas:
+        "header header"   /* Header over twee kolommen */
+        "main sidebar"    /* Main naast de zijbalk */
+        "footer footer";  /* Footer over twee kolommen */
+    grid-template-columns: 3fr 1fr; /* 3 delen voor main, 1 deel voor sidebar */
+    grid-template-rows: auto 1fr auto; /* Hoogteverdeling */
+    height: 100vh;
+    gap: 10px;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    background-color: #6C5B7B;
+    color: white;
+    padding-top: 20px; /* Padding bovenaan de header is 20px, de rest is 0. */
+    text-align: center;
+    position: relative; /* Zorgt dat de navigatie correct wordt geplaatst */
+}
+
+/* Navigatie onderin de header */
+.header-nav {
+    background-color: #4A4A7D;
+    padding: 10px; /* Binnenruimte rondom de links */
+}
+
+.header-nav ul {
+    display: flex; /* Flexbox voor horizontale uitlijning */
+    justify-content: flex-start; /* Plaatst links zoveel mogelijk naar links */
+    gap: 15px; /* Ruimte tussen de linkjes */
+    list-style: none; /* Verwijdert opsommingstekens */
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav a {
+    color: white; /* Kleur van de links */
+    text-decoration: none;
+    padding: 5px 10px; /* Binnenruimte rondom de linkjes */
+    border-radius: 3px; /* Zorgt voor afgeronde hoeken */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Soepele overgang bij hover */
+}
+
+.header-nav a:hover {
+    background-color: #F67280; /* Achtergrondkleur bij hover */
+    color: white;
+}
+
+/* Hoofdinhoud */
+.main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Zijbalk */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #F8B195;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #355C7D;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
