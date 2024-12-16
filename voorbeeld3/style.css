@@ -1,0 +1,89 @@
+/* Basisstijl voor de hele pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Verwijdert standaardmarges */
+    padding: 0; /* Verwijdert standaardpadding */
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CSS Grid Container */
+.grid-container {
+    display: grid; /* Activeert CSS Grid */
+    grid-template-areas: 
+        "header header"   /* Header over twee kolommen */
+        "main aside"      /* Main links, zijbalk rechts */
+        "footer footer";  /* Footer over twee kolommen */
+    grid-template-columns: 3fr 1fr; /* Main krijgt 3 delen, aside 1 deel */
+    grid-template-rows: auto 1fr auto; /* Hoogteverdeling */
+    gap: 15px; /* Ruimte tussen grid-items */
+    padding: 15px;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #6C5B7B;
+    color: white;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container voor artikelen */
+.articles-container {
+    display: grid; /* Grid layout voor artikelen. Dit is dus een grid IN een grid! Dat kan :) */
+    grid-template-columns: 1fr 1fr 1fr; /* 3 gelijke kolommen */
+    gap: 15px; /* Ruimte tussen artikelen */
+}
+
+/* Artikelen */
+.article {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Zijbalk */
+.aside {
+    grid-area: aside;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-left: 3px solid #6C5B7B;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    padding: 10px;
+    text-align: center;
+    background-color: #6C5B7B;
+    color: white;
+}
