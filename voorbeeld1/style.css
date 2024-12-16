@@ -1,0 +1,92 @@
+* {
+    margin: 0; /* Zet de margin voor de hele pagina uit */
+    padding: 0; /* Zet de padding voor de hele pagina uit */
+    box-sizing: border-box;
+}
+
+/* Basisstijl voor de hele pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* CSS Grid Container */
+.grid-container {
+    display: grid;
+    /* Dit is een 3 bij 3 grid. Bovenaan staat de header. Op de tweede rij staan de nav, de main en de sidebar naast elkaar. */
+    grid-template-areas: 
+        "header header header"
+        "nav main sidebar"
+        "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr; /* De middelste kolom is 2 keer zo breed als de linker en de rechter. 1fr is "1 fraction", 1 deel. */
+    grid-template-rows: auto 1fr auto; /* De eerste en laatste rij nemen zoveel ruimte in als ze nodig hebben. De middelste rij krijgt de rest. */
+    min-height: 100vh; /* De grid is minimaal de volledige hoogte van het scherm */
+    gap: 10px; /* Ruimte tussen de grid-elementen */
+}
+
+/* Header stijl */
+.header {
+    grid-area: header;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 15pt;
+}
+
+/* Navigatiebalk stijl */
+.nav {
+    grid-area: nav;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    margin: 10px 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Als je je muis over een link in de navigatie doet, wordt de tekst #1abc9c */
+.nav a:hover {
+    color: #1abc9c;
+}
+
+/* Hoofdinhoud */
+.main {
+    grid-area: main;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Zijbalk */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-left: 2px solid #bdc3c7;
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 12pt;
+}
